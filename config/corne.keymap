@@ -208,11 +208,11 @@
             // --------------------------------------------------------------------------------
 
             bindings = <
-&none    &none          &none        &none   &none      &none            &trans     &none   &none    &none    &none   &none   &none
-&none    &none          &none        &none   &none      &none            &trans     &none  &kp BT_PRV    &kp BT_NXT  &kp BT_CLR &none   &none
-&none    &none          &none        &none   &none      &none            &trans     &none    &none    &none    &none   &none   &none
-                        &trans       &trans  &trans     &trans           &trans     &trans     &trans  &trans
-                                                                                    &trans
+&none    &none    &none    &none    &none    &none        &trans    &none       &none       &none       &none       &none    &none
+&none    &none    &none    &none    &none    &none        &trans    &none       &kp BT_PRV  &kp BT_NXT  &kp BT_CLR  &none    &none
+&none    &none    &none    &none    &none    &none        &trans    &none       &none       &none       &none       &none    &none
+                  &trans   &trans   &trans   &trans       &trans    &trans      &trans      &trans
+                                                          &trans
             >;
 
             label = "KBC";
