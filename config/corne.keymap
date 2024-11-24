@@ -41,6 +41,45 @@
         };
     };
 
+     macros {
+            screenshot: screenshot {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp GUI &kp LSHFT &kp S>;
+            };
+
+            text_cap: text_cap {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp GUI &kp LSHFT &kp T>;
+            };
+
+            color_select: color_select {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp GUI &kp LSHFT &kp C>;
+            };
+
+            language_cycle: language_cycle {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp GUI &kp SPACE>;
+            };
+
+            shift_tab: shift_tab {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LSHFT &kp TAB>;
+            };
+
+            clipboard: clipboard {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LGUI &kp V>;
+            };
+
+    };
+
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         label = "RGB_ENCODER";
@@ -59,7 +98,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // Default layer: QWE
+        // Default layer: QWE 0
         default_layer {
             display-name = "QWERTY";
 
@@ -69,72 +108,85 @@
             // | NONE |  Z  |  X  |  C  |  V  |  B  |             |  ←    |  N  |  M   |   ,   |  .  |  /  | NONE |
             //              |NONE | CTR | SPA | NAV |             |  →    | SYM | BKSP | SHIFT |
             //                                                    | enter
+            // --------------------------------------------------------------------------------
 
             bindings = <
-&none   &kp Q  &kp W      &kp E         &kp R      &kp T     &kp UP_ARROW     &kp Y      &kp U     &kp I      &kp O    &kp P     &none
-&none   &kp A  &kp S      &kp D         &kp F      &kp G     &kp DOWN_ARROW   &kp H      &kp J     &kp K      &kp L    &kp SEMI  &none
-&none   &kp Z  &kp X      &kp C         &kp V      &kp B     &kp LEFT_ARROW   &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &none
-               &none      &sk LCTRL     &kp SPACE  &mo NAV   &kp RIGHT_ARROW  &mo SYM    &kp BSPC  &sk RALT
-                                                             &none
+&none   &kp Q  &kp W      &kp E         &kp R      &kp T     &mmv MOVE_UP     &kp Y      &kp U     &kp I      &kp O    &kp P     &none
+&none   &kp A  &kp S      &kp D         &kp F      &kp G     &mmv MOVE_DOWN   &kp H      &kp J     &kp K      &kp L    &kp SEMI  &none
+&none   &kp Z  &kp X      &kp C         &kp V      &kp B     &mmv MOVE_LEFT   &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &none
+               &none      &sk LCTRL     &kp SPACE  &mo NAV   &mmv MOVE_RIGHT  &mo SYM    &kp BSPC  &sk RALT
+                                                             &mkp LCLK
             >;
 
             label = "QWERTY";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        // Symbol layer: SYM
+        // Symbol layer: SYM 1
         symbol_layer {
-            display-name = "Symbol";
+            display-name = "SYM";
 
             // -----------------------------------------------------------------------------------------
-            // | NONE | NONE |  [  |  {  |  (  |  ~  |   |  ^  |  )  |  }  |  ]  | NONE | NONE |
-            // | NONE |  -   |  *  |  =  |  _  |  $  |   |  #  | CTR | SHF | ALT | GUI  | NONE |
-            // | NONE |  +   |  @  |  |  |  &  |  %  |   |  !  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // | NONE | NONE |  [  |  {  |  (  |  ~  |         |TRANS|  ^  |  )  |  }  |  ]  | NONE | NONE |
+            // | NONE |  -   |  *  |  =  |  _  |  $  |         |TRANS|  #  | CTR | SHF | ALT | GUI  | NONE |
+            // | NONE |  +   |  @  |  |  |  &  |  %  |         |TRANS|  !  |  '  |  "  |  `  |  \   | NONE |
+            //               |TRANS|TRANS| TAB | NUM |         |TRANS|TRANS|TRANS|TRANS|
+            //                                                 |TRANS|
+            // --------------------------------------------------------------------------------
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                      &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
-                                                                       &mkp LCLK
+&none   &none     &kp LBKT   &kp LBRC   &kp LPAR   &kp TILDE          &trans     &kp CARET  &kp RPAR   &kp RBRC   &kp RBKT  &none     &none
+&none   &kp MINUS &kp ASTRK  &kp EQUAL  &kp UNDER  &kp DLLR           &trans     &kp HASH   &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI  &none
+&none   &kp PLUS  &kp AT     &kp PIPE   &kp AMPS   &kp PRCNT          &trans     &kp EXCL   &kp SQT    &kp DQT    &kp GRAVE &kp BSLH  &none
+                  &trans     &trans     &kp TAB    &mo NUM            &trans     &trans     &trans     &trans
+                                                                      &trans
             >;
 
             label = "SYMBOL";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        // Navigation layer: NAV
+        // Navigation layer: NAV 2
         nav_layer {
-            display-name = "Navigation";
+            display-name = "NAV";
+
+            // -----------------------------------------------------------------------------------------
+            // | NONE | COLOR | CAP  | TAB  | SCRN | PLAY |         |TRANS| LANG | MUTE | NONE | NONE | DEL  | BOOT |
+            // | NONE | GUI   | ALT  | SHFT | CTRL | ESC  |         |TRANS| F13  | UP   | DOWN | LEFT | RIGHT| NONE |
+            // | NONE | VOL-  | VOL+ | STAB | CLIP | F19  |         |TRANS| F14  | PGUP | PGDN | HOME | END  | NONE |
+            //                |TRANS |TRANS |TRANS |TRANS |         |TRANS| NONE | ENTER|TRANS |
+            //                                                      |TRANS|
+            // --------------------------------------------------------------------------------
+
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3       &kp F4     &kp F5      &mmv MOVE_UP     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5    &mmv MOVE_LEFT   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                    &kp C_MUTE  &trans       &trans     &trans      &mmv MOVE_RIGHT  &trans       &trans     &trans
-                                                                    &mkp LCLK
+&none  &color_select     &text_cap       &kp TAB     &screenshot    &C_PP           &trans     &language_cycle   &kp C_MUTE    &none          &none      &kp DELETE   &bootloader
+&none  &kp LGUI          &kp LALT        &kp LSHFT   &kp LCTRL      &kp ESC         &trans     &kp F13           &kp UP        &kp DOWN       &kp LEFT   &kp RIGHT    &none
+&none  &C_VOLUME_DOWN    &C_VOLUME_UP    &shift_tab  &clipboard     &kp F19         &trans     &kp F14           &kp PAGE_UP   &kp PAGE_DOWN  &kp HOME   &kp END      &none
+                         &trans          &trans      &trans         &trans          &trans     &none             &kp ENTER     &trans
+                                                                                    &trans
             >;
 
-            label = "Navigation";
+            label = "NAVIGATION";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        // Number layer: NUM
+        // Number layer: NUM 3
         number_layer {
-            display-name = "NUMBER";
-
+            display-name = "NUM";
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // | NONE | F6   | F4   | F2   | F10  | F8   |         |TRANS| +    | 7    | 8    | 9    | *    | NONE |
+            // | F12  | GUI  | ALT  | SHFT | CTRL | F11  |         |TRANS| -    | 4    | 5    | 6    | /    | NONE |
+            // | NONE | F7   | F5   | F3   | F1   | F9   |         |TRANS| .    | 1    | 2    | 3    | =    | NONE |
+            //               |TRANS |TRANS |TRANS |TRANS |         |TRANS|TRANS | BSPC | 0    |
+            //                                                     |TRANS|
+            // --------------------------------------------------------------------------------
 
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &mmv MOVE_DOWN   &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                         &kp C_MUTE      &trans        &trans        &trans             &mmv MOVE_RIGHT  &kp INS          &kp DEL          &trans
-                                                                                        &mkp LCLK
+&none    &kp F6            &kp F4          &kp F2      &kp F10        &kp F8             &trans     &kp PLUS   &kp N7    &kp N8    &kp N9   &kp ASTRK   &none
+&kp F12  &kp LGUI          &kp LALT        &kp LSHFT   &kp LCTRL      &kp F11            &trans     &kp MINUS  &kp N4    &kp N5    &kp N6   &kp SLASH   &none
+&none    &kp F7            &kp F5          &kp F3      &kp F1         &kp F9             &trans     &kp DOT    &kp N1    &kp N2    &kp N3   &kp EQUAL   &none
+                           &trans          &trans      &trans         &trans             &trans     &trans     &kp BSPC  &kp N0
+                                                                                         &trans
             >;
 
             label = "NUMBER";
