@@ -139,7 +139,7 @@
 
             bindings = <
 &none   &none     &kp LBKT   &kp LBRC   &kp LPAR   &kp TILDE          &trans     &kp CARET  &kp RPAR   &kp RBRC   &kp RBKT  &none     &none
-&none   &kp MINUS &kp ASTRK  &kp EQUAL  &kp UNDER  &kp DLLR           &trans     &kp HASH   &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI  &none
+&none   &kp MINUS &kp ASTRK  &kp EQUAL  &kp UNDER  &kp DLLR           &trans     &kp HASH   &sk RCTRL  &sk RSHFT  &sk RALT  &sk RGUI  &none
 &none   &kp PLUS  &kp AT     &kp PIPE   &kp AMPS   &kp PRCNT          &trans     &kp EXCL   &kp SQT    &kp DQT    &kp GRAVE &kp BSLH  &none
                   &trans     &trans     &kp TAB    &mo NUM            &trans     &trans     &trans     &trans
                                                                       &trans
@@ -163,7 +163,7 @@
 
             bindings = <
 &none  &color_select        &text_cap       &kp TAB     &screenshot    &kp C_PP           &trans     &language_cycle   &kp C_MUTE    &none          &none      &kp DELETE   &bootloader
-&none  &kp LGUI             &kp LALT        &kp LSHFT   &kp LCTRL      &kp ESC         &trans     &kp F13           &kp UP        &kp DOWN       &kp LEFT   &kp RIGHT    &none
+&none  &sk LGUI             &sk LALT        &sk LSHFT   &sk LCTRL      &kp ESC         &trans     &kp F13           &kp UP        &kp DOWN       &kp LEFT   &kp RIGHT    &none
 &none  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP &shift_tab  &clipboard     &kp F19         &trans     &kp F14           &kp PAGE_UP   &kp PAGE_DOWN  &kp HOME   &kp END      &none
                             &trans          &trans      &trans         &trans          &trans     &mo KBC             &kp ENTER     &trans
                                                                                     &trans
@@ -186,7 +186,7 @@
 
             bindings = <
 &none    &kp F6            &kp F4          &kp F2      &kp F10        &kp F8             &trans     &kp PLUS   &kp N7    &kp N8    &kp N9   &kp ASTRK   &none
-&kp F12  &kp LGUI          &kp LALT        &kp LSHFT   &kp LCTRL      &kp F11            &trans     &kp MINUS  &kp N4    &kp N5    &kp N6   &kp SLASH   &none
+&kp F12  &sk LGUI          &sk LALT        &sk LSHFT   &sk LCTRL      &kp F11            &trans     &kp MINUS  &kp N4    &kp N5    &kp N6   &kp SLASH   &none
 &none    &kp F7            &kp F5          &kp F3      &kp F1         &kp F9             &trans     &kp DOT    &kp N1    &kp N2    &kp N3   &kp EQUAL   &none
                            &trans          &trans      &trans         &trans             &trans     &trans     &kp BSPC  &kp N0
                                                                                          &trans
