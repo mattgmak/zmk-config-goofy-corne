@@ -48,37 +48,61 @@
             screenshot: screenshot {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp GUI &kp LSHFT &kp S>;
+                bindings
+                    = <&macro_press &kp LGUI &kp LSHFT>
+                    , <&macro_tap &kp S>
+                    , <&macro_release &kp LGUI &kp LSHFT>
+                    ;
             };
 
             text_cap: text_cap {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp GUI &kp LSHFT &kp T>;
+                bindings
+                    = <&macro_press &kp LGUI &kp LSHFT>
+                    , <&macro_tap &kp T>
+                    , <&macro_release &kp LGUI &kp LSHFT>
+                    ;
             };
 
             color_select: color_select {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp GUI &kp LSHFT &kp C>;
+                bindings
+                    = <&macro_press &kp LGUI &kp LSHFT>
+                    , <&macro_tap &kp C>
+                    , <&macro_release &kp LGUI &kp LSHFT>
+                    ;
             };
 
             language_cycle: language_cycle {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp GUI &kp SPACE>;
+                bindings
+                    = <&macro_press &kp LGUI>
+                    , <&macro_tap &kp SPACE>
+                    , <&macro_release &kp LGUI>
+                    ;
             };
 
             shift_tab: shift_tab {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LSHFT &kp TAB>;
+                bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp TAB>
+                    , <&macro_release &kp LSHFT>
+                    ;
             };
 
             clipboard: clipboard {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LGUI &kp V>;
+                bindings
+                    = <&macro_press &kp LGUI>
+                    , <&macro_tap &kp V>
+                    , <&macro_release &kp LGUI>
+                    ;
             };
 
     };
