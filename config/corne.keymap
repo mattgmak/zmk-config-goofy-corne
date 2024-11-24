@@ -22,6 +22,11 @@
 #define NUM 3
 #define KBC 4
 
+&sk {
+    quick-release;
+}
+
+
 / {
     behaviors {
         td0: td0 {
