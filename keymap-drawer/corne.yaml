@@ -104,7 +104,7 @@ layers:
   - '&text_cap'
   - $$mdi:keyboard-tab$$
   - '&screenshot'
-  - '&C_PP'
+  - $$mdi:play-pause$$
   - {t: '$$mdi:transfer$$', type: trans}
   - '&language_cycle'
   - $$mdi:volume-off$$
@@ -126,8 +126,8 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&C_VOLUME_DOWN'
-  - '&C_VOLUME_UP'
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
   - '&shift_tab'
   - '&clipboard'
   - F19
