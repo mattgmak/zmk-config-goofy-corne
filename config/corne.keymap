@@ -41,7 +41,7 @@
         };
     };
 
-     macros {
+    macros {
             screenshot: screenshot {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -192,5 +192,29 @@
             label = "NUMBER";
             sensor-bindings = <&scroll_encoder>;
         };
+
+        // Keyboard control layer: KBC 4
+        kbc_layer {
+            display-name = "KBC";
+            // -----------------------------------------------------------------------------------------
+            // | NONE | F6   | F4   | F2   | F10  | F8   |         |TRANS| +    | 7    | 8    | 9    | *    | NONE |
+            // | F12  | GUI  | ALT  | SHFT | CTRL | F11  |         |TRANS| -    | 4    | 5    | 6    | /    | NONE |
+            // | NONE | F7   | F5   | F3   | F1   | F9   |         |TRANS| .    | 1    | 2    | 3    | =    | NONE |
+            //               |TRANS |TRANS |TRANS |TRANS |         |TRANS|TRANS | BSPC | 0    |
+            //                                                     |TRANS|
+            // --------------------------------------------------------------------------------
+
+            bindings = <
+&none    &none          &none        &none   &none      &none            &trans     &none   &none    &none    &none   &none   &none
+&none    &none          &none        &none   &none      &none            &trans     &none  &kp BT_PRV    &kp BT_NXT  &kp BT_CLR &none   &none
+&none    &none          &none        &none   &none      &none            &trans     &none    &none    &none    &none   &none   &none
+                        &trans       &trans  &trans     &trans           &trans     &trans     &trans  &trans
+                                                                                    &trans
+            >;
+
+            label = "KBC";
+            sensor-bindings = <&scroll_encoder>;
+        };
+
     };
 };
