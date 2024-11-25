@@ -1,0 +1,247 @@
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+layers:
+  QWERTY:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:keyboard-space$$
+  - NAVIGATION
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - SYMBOL
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:mouse-left-click-outline$$
+  SYMBOL:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '[', s: '{'}
+  - '{'
+  - (
+  - '~'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - ^
+  - )
+  - '}'
+  - {t: ']', s: '}'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
+  - '*'
+  - {t: '=', s: +}
+  - _
+  - $
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '#'
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: RGUI, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - +
+  - '@'
+  - '|'
+  - '&'
+  - '%'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '!'
+  - {t: '''', s: '"'}
+  - '"'
+  - {t: '`', s: '~'}
+  - {t: \, s: '|'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-tab$$
+  - NUMBER
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  NAVIGATION:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&color_select'
+  - '&text_cap'
+  - $$mdi:keyboard-tab$$
+  - '&screenshot'
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&language_cycle'
+  - $$mdi:volume-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:progress-download$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: LGUI, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - F13
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
+  - '&shift_tab'
+  - '&clipboard'
+  - F19
+  - {t: '$$mdi:transfer$$', type: trans}
+  - F14
+  - PgUp
+  - PgDn
+  - HOME
+  - END
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - KBC
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  NUMBER:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F6
+  - F4
+  - F2
+  - F10
+  - F8
+  - {t: '$$mdi:transfer$$', type: trans}
+  - +
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - '*'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F12
+  - {t: LGUI, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - F11
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '-', s: _}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: /, s: '?'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F7
+  - F5
+  - F3
+  - F1
+  - F9
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ., s: '>'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '=', s: +}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '0', s: )}
+  - {t: '$$mdi:transfer$$', type: trans}
+  KBC:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
