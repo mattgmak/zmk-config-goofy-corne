@@ -191,11 +191,11 @@
             // --------------------------------------------------------------------------------
 
             bindings = <
-&none  &color_select        &text_cap       &kp TAB     &screenshot    &kp C_PP           &trans     &language_cycle   &kp C_MUTE    &none          &none      &kp DELETE   &bootloader
-&none  &sk LGUI             &sk LALT        &sk LSHFT   &sk LCTRL      &kp ESC         &trans     &kp F13           &kp UP        &kp DOWN       &kp LEFT   &kp RIGHT    &none
-&none  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP &shift_tab  &clipboard     &kp F19         &trans     &kp F14           &kp PAGE_UP   &kp PAGE_DOWN  &kp HOME   &kp END      &none
+&none  &color_select        &text_cap       &kp TAB     &screenshot    &kp C_PP        &trans     &language_cycle   &kp C_MUTE    &kp K_CMENU     &none      &kp DELETE   &bootloader
+&none  &sk LGUI             &sk LALT        &sk LSHFT   &sk LCTRL      &kp ESC         &trans     &kp F13           &kp UP        &kp DOWN        &kp LEFT   &kp RIGHT    &none
+&none  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP &shift_tab  &clipboard     &kp F19         &trans     &kp F14           &kp PAGE_UP   &kp PAGE_DOWN   &kp HOME   &kp END      &none
                             &trans          &trans      &trans         &trans          &trans     &mo KBC             &kp ENTER     &trans
-                                                                                    &trans
+                                                                                       &trans
             >;
 
             label = "NAVIGATION";
